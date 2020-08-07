@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+##About the application:
+
+This application consists of three parts
+1)Allowing user to create a binary tree by asking for inputs
+  It asks for root element and then asks for its child elements(left and right) and so on till each and every child has no children
+2)Displaying the tree
+3)Displaying the neighbors of the selected node
+   After displaying the tree,It allows user to select the nodes and after selecting a node,all its neighbors(i.e., parent,left and child) are highlighted.
