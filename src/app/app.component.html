@@ -1,0 +1,30 @@
+    <div class="form-group row" *ngIf="!treeDone" style="text-align: center;" class="aligning">
+        <label for="node" class="form-label"><b>{{message}}</b></label>
+        <br>
+        <div>
+            <input 
+            type="text"
+            id="node"
+            [(ngModel)]="inputnode"
+            required
+            name="node">
+        </div>
+        <br>
+        <button type="btn" class="btn btn-primary" (click)="addElement()" *ngIf="isRoot" style="margin-right: 10px;">Enter</button>
+        <button type="btn" class="btn btn-primary" (click)="createLeft()" *ngIf="isLeft" style="margin-right: 10px;">Enter</button>
+        <button type="btn" class="btn btn-primary" (click)="createRight()" *ngIf="isRight" style="margin-right: 10px;">Enter</button>
+        <button type="btn" class="btn btn-primary" (click)="inputnode='';isRoot?addElement():isLeft?createLeft():createRight()">None</button>
+    </div>
+    <div *ngIf="treeDone" style="text-align: center;">
+        <div *ngFor="let parent of tree">
+            <span *ngFor="let child of parent">
+                <span *ngIf= "child===''">
+                    <button style="background-color: transparent;color: white;border: none;"> &nbsp;</button>
+                </span>
+                <span *ngIf= "child!==''">
+                   <button (click)="neighbor(child)" class="node" [ngClass]="{'bgGreen':neighbours.indexOf(child.value)>-1}"> {{child.value}}</button>
+                </span>             
+            </span>
+            <br>
+        </div>
+    </div>

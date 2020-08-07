@@ -1,0 +1,19 @@
+.gap{
+    margin:0px 25px 0px 0px;
+}
+
+.bgGreen{
+    border:0px solid ;
+    background-color: green;
+    box-shadow: -3px 3px green, -2px 2px green, -1px 1px green;
+    padding: 10px 24px
+
+}
+
+.node{
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.aligning{
+    margin-top:25px;
+}
